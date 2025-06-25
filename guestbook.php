@@ -60,7 +60,7 @@ function quilt_block($post) {
 }
 $author = queryIdent($source_ip, $source_port, $dest_port);
 if ($author && $_GET["body"]) {
-    if (!is_dir("/home//" . $_GET["author"]))
+    if (!is_dir("/home//" . $author))
         return die("User does not exist");
     if (strlen($_GET["body"]) > 150)
         return die("The most your message can be is 150 characters.");
