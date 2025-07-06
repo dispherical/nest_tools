@@ -27,7 +27,9 @@ if [ ! -f "/home/$NEWUSER/.ssh/authorized_keys" ]; then
 fi
 cp /home/$OLDUSER/.ssh/authorized_keys /home/$NEWUSER/.ssh/authorized_keys
 chmod -R 700 /home/$NEWUSER/.ssh
+chmod -R 600 /home/$NEWUSER/.ssh/authorized_keys
 chown -R $NEWUSER:$NEWUSER /home/$NEWUSER/.ssh
+chown -R $NEWUSER:$NEWUSER /home/$NEWUSER
 
 
 OLDHOME="/home/$OLDUSER"
